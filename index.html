@@ -1,0 +1,60 @@
+<html>
+	<head><meta http-equiv="pragma" content="no-cache"/></head>
+	<body>
+		<style>
+			.container{
+				width:100%;
+				margin:0 auto;
+			}
+			.grid_container{
+				display: grid;
+				grid-template-columns: 1fr 2fr 1fr;
+			}
+			.grid_item{
+				margin: 0 auto;
+			}
+			.label{
+				font-style: bold;
+				background-color:green;
+				color:white;
+			}
+			.table{
+				border: 1px solid black;
+			}
+		</style>
+		<div class="container">
+			<div class="grid_container">
+				<div class="grid_item"></div>
+				<div class="grid_item form">
+					<h1>My Cool Form</h1>
+					<form action="post.php" method="post">
+						<input type="hidden" name="action" value="process_donation">
+						<table class="tabel">
+							<tr>
+								<td class="label">First Name:</td>
+								<td><input type="text" placeholder="name" name="f_name"></td>
+							</tr>
+							<tr>
+								<td class="label">Last Name:</td>
+								<td><input type="text" placeholder="last name" name="l_name"></td>
+							</tr>
+							<tr>
+								<td class="label">Active:</td>
+								<td><input name="active" type="checkbox"></td>
+							</tr>
+							<tr>
+								<td class="label">Amount</td>
+								<td><input type="number" name="amount"></td>
+							</tr>
+							<tr>
+								<td class="label"></td>
+								<td><input type="submit" value="submit"></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+				<div class="grid_item"></div>
+			</div>
+		</div>
+	</body>
+</html>
