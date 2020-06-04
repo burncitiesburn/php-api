@@ -31,12 +31,13 @@ function doPost($post)
 {
 	if (validate($post) == true)
 	{
-		$donationResult = processDonation($post);
-		if (!empty($donationResult))
-		{
-			http_response_code(200);
-			return $donationResult;
-		}
+		if($post['action'] == 'process_donation')
+			$donationResult = processDonation($post);
+			if (!empty($donationResult))
+			{
+				http_response_code(200);
+				return $donationResult;
+			}
 	}
 	http_response_code(500);
 	return false;
