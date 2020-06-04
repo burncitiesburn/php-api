@@ -66,7 +66,11 @@ function onBadRequest()
 
 function validate($data)
 {
-	if (array_key_exists('f_name', $data) && !empty($data['f_name']) && array_key_exists('l_name', $data) && !empty($data['l_name']) && array_key_exists('active', $data) && !empty($data['active']) && array_key_exists('amount', $data) && !empty($data['amount']) && array_key_exists('action', $data) && !empty($data['action'])) 
+	if (array_key_exists('f_name', $data) && !empty($data['f_name']) &&
+	 	array_key_exists('l_name', $data) && !empty($data['l_name']) &&
+	 	array_key_exists('active', $data) && !empty($data['active']) &&
+	 	array_key_exists('amount', $data) && !empty($data['amount']) &&
+	 	array_key_exists('action', $data) && !empty($data['action'])) 
 		return true;
 }
 
